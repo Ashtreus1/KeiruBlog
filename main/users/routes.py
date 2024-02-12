@@ -21,8 +21,6 @@ def register():
         db.session.commit()
         flash(f'Your account has been created! You can login!', 'success')
 
-        set_email_credentials()
-
         return redirect(url_for('users.login'))
     return render_template('register.html', title='Register Account', form=form)
 
